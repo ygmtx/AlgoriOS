@@ -15,6 +15,8 @@
 		04F9F4E3208DB226001228A8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F9F4E2208DB226001228A8 /* main.m */; };
 		04F9F4ED208DB226001228A8 /* AlgoriOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F9F4EC208DB226001228A8 /* AlgoriOSTests.m */; };
 		04F9F4F8208DB226001228A8 /* AlgoriOSUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F9F4F7208DB226001228A8 /* AlgoriOSUITests.m */; };
+		04F9F525208DC9FB001228A8 /* Algorios.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F9F524208DC9FB001228A8 /* Algorios.m */; };
+		04F9F528208DCA35001228A8 /* Algorios+shell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F9F527208DCA35001228A8 /* Algorios+shell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		04F9F4F3208DB226001228A8 /* AlgoriOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlgoriOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04F9F4F7208DB226001228A8 /* AlgoriOSUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlgoriOSUITests.m; sourceTree = "<group>"; };
 		04F9F4F9208DB226001228A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04F9F523208DC9FB001228A8 /* Algorios.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Algorios.h; sourceTree = "<group>"; };
+		04F9F524208DC9FB001228A8 /* Algorios.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Algorios.m; sourceTree = "<group>"; };
+		04F9F526208DCA35001228A8 /* Algorios+shell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Algorios+shell.h"; sourceTree = "<group>"; };
+		04F9F527208DCA35001228A8 /* Algorios+shell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Algorios+shell.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,7 @@
 		04F9F4D2208DB225001228A8 /* AlgoriOS */ = {
 			isa = PBXGroup;
 			children = (
+				04F9F519208DB59D001228A8 /* impl */,
 				04F9F4D3208DB225001228A8 /* AppDelegate.h */,
 				04F9F4D4208DB225001228A8 /* AppDelegate.m */,
 				04F9F4D6208DB225001228A8 /* ViewController.h */,
@@ -130,6 +137,17 @@
 				04F9F4F9208DB226001228A8 /* Info.plist */,
 			);
 			path = AlgoriOSUITests;
+			sourceTree = "<group>";
+		};
+		04F9F519208DB59D001228A8 /* impl */ = {
+			isa = PBXGroup;
+			children = (
+				04F9F523208DC9FB001228A8 /* Algorios.h */,
+				04F9F524208DC9FB001228A8 /* Algorios.m */,
+				04F9F526208DCA35001228A8 /* Algorios+shell.h */,
+				04F9F527208DCA35001228A8 /* Algorios+shell.m */,
+			);
+			path = impl;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,8 +280,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04F9F528208DCA35001228A8 /* Algorios+shell.m in Sources */,
 				04F9F4D8208DB225001228A8 /* ViewController.m in Sources */,
 				04F9F4E3208DB226001228A8 /* main.m in Sources */,
+				04F9F525208DC9FB001228A8 /* Algorios.m in Sources */,
 				04F9F4D5208DB225001228A8 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -436,7 +456,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KN8CJQCVNR;
 				INFOPLIST_FILE = AlgoriOS/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -454,7 +474,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KN8CJQCVNR;
 				INFOPLIST_FILE = AlgoriOS/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
