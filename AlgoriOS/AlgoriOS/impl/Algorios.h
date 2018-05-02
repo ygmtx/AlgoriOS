@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+//#define ALGORIOS_TEST DEBUG
 
 @interface Algorios : NSObject
-
+-(void)sark;
+@property(copy)NSString *name;
 @end

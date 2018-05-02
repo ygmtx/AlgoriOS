@@ -8,6 +8,7 @@
 
 #import "Algorios.h"
 #import <objc/runtime.h>
+#import "NSArray+YM_Desc.h"
 
 @implementation Algorios
 
@@ -17,18 +18,17 @@
         unsigned int count = 0;
         
         Method *methods = class_copyMethodList(objc_getMetaClass(class_getName(self)), &count);
-        SEL hookMethodName = NSSelectorFromString(@"hook:");
+        SEL hookMethodName = NSSelectorFromString(@"ym_hook:");
         Method hookMethod = class_getClassMethod([Algorios class], hookMethodName);
 
         for (int i = 0; i < count; i++) {
             Method oriMethod = methods[i];
             SEL oriMethodName = method_getName(oriMethod);
-            NSLog(@"\n methodName: %@ \n",NSStringFromSelector(oriMethodName));
             
-            if ([NSStringFromSelector(oriMethodName) isEqualToString:@"hook:"]) {
+            if (![NSStringFromSelector(oriMethodName) containsString:@"ym"]) {
                 break;
             }
-            
+
             BOOL isAdd = NO;
             isAdd = class_addMethod(objc_getMetaClass(class_getName(self)), oriMethodName, method_getImplementation(hookMethod), method_getTypeEncoding(hookMethod));
             if (isAdd) {
@@ -42,11 +42,18 @@
 }
 
 //The execution time
-+(void)hook:(id)array{
++(void)ym_hook:(NSArray **)array{
+    NSAssert(*array != nil && [*array count] != 0, @"array==nil or count==0");
+
+    NSLog(@"\n(%@)\nstart:...\n%@",NSStringFromSelector(_cmd),*array);
     CFAbsoluteTime start = CFAbsoluteTimeGetCurrent();
-    [self hook:array];
+    [self ym_hook:array];
     CFAbsoluteTime end = CFAbsoluteTimeGetCurrent();
-    NSLog(@"\n (%@) time: %f s",NSStringFromSelector(_cmd),end - start);
+    NSLog(@"\n(%@)function timing: %f s\n%@\n...end",NSStringFromSelector(_cmd),end-start,*array);
+}
+
+-(void)sark{
+    NSLog(@"Myname is %@",self.name);
 }
 
 @end

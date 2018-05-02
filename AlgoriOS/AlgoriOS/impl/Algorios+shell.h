@@ -9,5 +9,5 @@
 #import "Algorios.h"
 
 @interface Algorios (shell)
-+(void)shell:(NSArray **)arr;
++(void)ym_shell:(NSArray **)arr;
 @end

@@ -18,12 +18,11 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     NSArray *arr = @[@5,@11,@7,@9,@2,@3,@12,@8,@6,@1,@4,@10];
+//
+    [Algorios ym_shell:&arr];
     
-    [Algorios shell:&arr];
-    
-    NSLog(@"%@",arr);
-
     return YES;
 }
+
 
 @end

@@ -17,6 +17,7 @@
 		04F9F4F8208DB226001228A8 /* AlgoriOSUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F9F4F7208DB226001228A8 /* AlgoriOSUITests.m */; };
 		04F9F525208DC9FB001228A8 /* Algorios.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F9F524208DC9FB001228A8 /* Algorios.m */; };
 		04F9F528208DCA35001228A8 /* Algorios+shell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F9F527208DCA35001228A8 /* Algorios+shell.m */; };
+		04F9F52B20916DFB001228A8 /* NSArray+YM_Desc.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F9F52A20916DFB001228A8 /* NSArray+YM_Desc.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,8 @@
 		04F9F524208DC9FB001228A8 /* Algorios.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Algorios.m; sourceTree = "<group>"; };
 		04F9F526208DCA35001228A8 /* Algorios+shell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Algorios+shell.h"; sourceTree = "<group>"; };
 		04F9F527208DCA35001228A8 /* Algorios+shell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Algorios+shell.m"; sourceTree = "<group>"; };
+		04F9F52920916DFB001228A8 /* NSArray+YM_Desc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+YM_Desc.h"; sourceTree = "<group>"; };
+		04F9F52A20916DFB001228A8 /* NSArray+YM_Desc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+YM_Desc.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +149,8 @@
 				04F9F524208DC9FB001228A8 /* Algorios.m */,
 				04F9F526208DCA35001228A8 /* Algorios+shell.h */,
 				04F9F527208DCA35001228A8 /* Algorios+shell.m */,
+				04F9F52920916DFB001228A8 /* NSArray+YM_Desc.h */,
+				04F9F52A20916DFB001228A8 /* NSArray+YM_Desc.m */,
 			);
 			path = impl;
 			sourceTree = "<group>";
@@ -281,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04F9F528208DCA35001228A8 /* Algorios+shell.m in Sources */,
+				04F9F52B20916DFB001228A8 /* NSArray+YM_Desc.m in Sources */,
 				04F9F4D8208DB225001228A8 /* ViewController.m in Sources */,
 				04F9F4E3208DB226001228A8 /* main.m in Sources */,
 				04F9F525208DC9FB001228A8 /* Algorios.m in Sources */,
@@ -463,7 +469,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.algorithm.ygm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -481,7 +487,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.algorithm.ygm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

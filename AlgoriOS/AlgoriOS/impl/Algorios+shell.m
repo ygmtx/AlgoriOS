@@ -10,19 +10,23 @@
 
 @implementation Algorios (shell)
 
-+(void)shell:(NSArray **)array{
++(void)ym_shell:(NSArray **)array{
+
     NSMutableArray *arrM = [*array mutableCopy];
     NSInteger h = 1 ,count = arrM.count;
     
     while (h < count/3) {
         h = 3 * h + 1;
     }
-    
+
     while (h >= 1) {
         for (NSInteger i = h; i < count; i++) {
             
             for (NSInteger j = i; j >= h && ([arrM[j] compare:arrM[j-h]] != NSOrderedDescending); j -= h) {
                 [arrM exchangeObjectAtIndex:j withObjectAtIndex:j-h];
+#ifdef ALGORIOS_TEST
+                NSLog(@"\n--\n%@\n--",arrM);
+#endif
             }
         }
         h = h/3;
